@@ -30,7 +30,20 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="include" />
 		</Compiler>
+		<Linker>
+			<Add library="glfw3" />
+			<Add library="opengl32" />
+			<Add library="gdi32" />
+			<Add directory="lib" />
+		</Linker>
+		<Unit filename="include/Window.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Window.cpp" />
+		<Unit filename="src/gl3w/gl3w.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
